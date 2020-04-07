@@ -12,12 +12,13 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/search_materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
 
         <LinearLayout
+            android:id="@+id/search_root"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:animateLayoutChanges="true"
             android:orientation="vertical">
 
             <LinearLayout
@@ -32,11 +33,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/search_name"
+                    android:contentDescription="@null"
                     android:minWidth="@dimen/search_icon_56"
-                    android:scaleType="center"
-                    android:tint="?attr/colorControlNormal"
-                    android:tintMode="src_in" />
+                    android:scaleType="center" />
 
                 <com.lapism.search.internal.SearchEditText
                     android:id="@+id/search_searchEditText"
@@ -53,7 +52,7 @@
                     android:privateImeOptions="nm"
                     android:singleLine="true"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="@dimen/search_text_16"
+                    android:textSize="@dimen/search_sp_16"
                     android:windowSoftInputMode="stateAlwaysHidden|adjustPan|adjustNothing" />
 
                 <FrameLayout
@@ -62,23 +61,19 @@
 
                     <ImageView
                         android:id="@+id/search_imageView_mic"
-                        android:layout_width="@dimen/search_icon_56"
+                        android:layout_width="@dimen/search_icon_48"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/search_name"
-                        android:scaleType="center"
-                        android:tint="?attr/colorControlNormal"
-                        android:tintMode="src_in" />
+                        android:contentDescription="@null"
+                        android:scaleType="center" />
 
                     <ImageView
                         android:id="@+id/search_imageView_clear"
-                        android:layout_width="@dimen/search_icon_56"
+                        android:layout_width="@dimen/search_icon_48"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/search_name"
-                        android:scaleType="center"
-                        android:tint="?attr/colorControlNormal"
-                        android:tintMode="src_in" />
+                        android:contentDescription="@null"
+                        android:scaleType="center" />
 
                 </FrameLayout>
 
@@ -87,10 +82,10 @@
                     android:layout_width="@dimen/search_icon_48"
                     android:layout_height="match_parent"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/search_name"
-                    android:scaleType="center"
-                    android:tint="?attr/colorControlNormal"
-                    android:tintMode="src_in" />
+                    android:contentDescription="@null"
+                    android:paddingStart="@dimen/search_dp_4"
+                    android:paddingEnd="@dimen/search_dp_8"
+                    android:scaleType="center" />
 
             </LinearLayout>
 

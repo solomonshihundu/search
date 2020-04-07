@@ -1,4 +1,4 @@
-package com.lapism.search.behavior
+package com.lapism.search.widget
 
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -9,14 +9,13 @@ import com.lapism.search.internal.SearchLayout
 
 class SearchBehavior<S : SearchLayout> : CoordinatorLayout.Behavior<S>() {
 
-    // *********************************************************************************************
     override fun layoutDependsOn(
         parent: CoordinatorLayout,
         child: S,
         dependency: View
     ): Boolean {
         if (dependency is AppBarLayout) {
-            ViewCompat.setZ(child, ViewCompat.getZ(dependency) + 1)
+            // ViewCompat.setZ(child, ViewCompat.getZ(dependency) + 1)
             return true
         }
         return super.layoutDependsOn(parent, child, dependency)
